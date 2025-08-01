@@ -1,96 +1,64 @@
 # 📌 Gestor de Proyectos
 
-Este repositorio contiene la estructura completa del **Gestor de Proyectos**, dividido en **Backend** y **Frontend**, con ramas configuradas para el trabajo colaborativo del equipo.
+Este repositorio contiene la estructura del proyecto dividido en **Backend** y **Frontend**, incluyendo ramas para el trabajo colaborativo.
 
 ---
 
-## 📂 **Estructura del Proyecto**
+## 🚀 Estructura de Carpetas
 
-Gestor-Proyectos/
-│
-├── Backend/                # Lógica del servidor, APIs y base de datos
-│   ├── src/                # Código fuente del backend
-│   ├── package.json        # Dependencias y scripts de backend
-│   └── ...                 
-│
-├── Frontend/               # Interfaz gráfica del sistema
-│   ├── public/             # Archivos públicos
-│   ├── src/                # Código fuente del frontend
-│   ├── package.json        # Dependencias y scripts del frontend
-│   └── ...
-│
-└── README.md               # Documentación del repositorio
+- **Backend/** → Contiene toda la lógica del servidor, APIs y base de datos.
+- **Frontend/** → Contiene la interfaz gráfica del sistema.
 
 ---
 
-## 🌱 **Ramas principales**
+## 🌱 Ramas principales
 
-| **Rama**      | **Descripción** |
-|---------------|----------------|
-| `produccion`  | Versión estable y lista para despliegue. |
-| `desarrollo`  | Rama principal para la integración de cambios. |
-| `DevCamilo`   | Rama individual para desarrollos de Camilo. |
-| `DevJuliana`  | Rama individual para desarrollos de Juliana. |
-| `prueba`      | Rama utilizada para probar nuevas funcionalidades antes de enviarlas a producción. |
+- `produccion` → Rama principal lista para despliegue.
+- `desarrollo` → Rama de desarrollo general.
+    - `DevCamilo` → Subrama para desarrollos de Camilo.
+    - `DevJuliana` → Subrama para desarrollos de Juliana.
+- `prueba` → Rama para pruebas antes de pasar a producción.
 
 ---
 
-## ⚙️ **Instalación de dependencias**
+## ⚙️ Instalación de dependencias
 
-### Backend
+Después de clonar el proyecto, instala las dependencias necesarias en cada parte:
+
+### 🔹 Backend
 \`\`\`bash
-cd Backend
+cd backend
 npm install
 \`\`\`
 
-### Frontend
+### 🔹 Frontend
 \`\`\`bash
-cd Frontend
+cd frontend
 npm install
 \`\`\`
 
 ---
 
-## 🚀 **Ejecución del proyecto**
+## 📢 Notas Importantes
 
-### Backend
-\`\`\`bash
-npm run start
-\`\`\`
-O en modo desarrollo:
-\`\`\`bash
-npm run dev
-\`\`\`
-
-### Frontend
-\`\`\`bash
-npm start
-\`\`\`
+- La carpeta **node_modules** y archivos temporales como `.cache` **NO** se suben al repositorio debido a su gran tamaño.
+- Para reconstruir dependencias después de clonar el proyecto, simplemente ejecuta `npm install` en cada carpeta (Backend y Frontend).
+- El archivo `.env` contiene variables sensibles y no debe compartirse públicamente.
 
 ---
 
-## 🤝 **Flujo de trabajo colaborativo**
+## ✅ Flujo de trabajo con ramas
 
-1. Clonar el repositorio:
+1. Crear una rama desde `desarrollo` antes de hacer cambios:
    \`\`\`bash
-   git clone https://github.com/TU-USUARIO/gestor-proyecto.git
+   git checkout desarrollo
+   git pull origin desarrollo
+   git checkout -b NombreDeTuRama
    \`\`\`
-2. Cambiar a la rama correspondiente:
-   \`\`\`bash
-   git checkout DevCamilo   # o DevJuliana
-   \`\`\`
-3. Guardar cambios:
-   \`\`\`bash
-   git add .
-   git commit -m "Descripción del cambio"
-   git push origin DevCamilo
-   \`\`\`
-4. Crear Pull Request hacia `desarrollo`.
+2. Hacer commits y push en tu rama.
+3. Crear un **Pull Request** para fusionar cambios a `desarrollo` o `produccion` según corresponda.
 
 ---
 
-## 🛠️ **Tecnologías utilizadas**
-
-- Backend: Node.js, Express, MongoDB/MySQL
-- Frontend: React, JavaScript, CSS, HTML
-- Control de versiones: Git y GitHub
+📌 **Autor:** Equipo de Desarrollo  
+📅 **Versión:** 1.0.0
