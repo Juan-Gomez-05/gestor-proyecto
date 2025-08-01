@@ -1,0 +1,40 @@
+.gantt-container {
+  border: 1px solid #ddd;
+  padding: 8px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+/* Estilo para remover texto dentro de las barras de tarea (dejamos solo el % si se desea) */
+.gantt-task .bar-label {
+  font-size: 0px;
+}
+
+/* Opcional: solo mostrar el % si se usa como name */
+.gantt-task .bar-label::after {
+  font-size: 12px;
+  color: black;
+  content: attr(data-label);
+  position: absolute;
+  left: 4px;
+  top: 4px;
+}
+
+/* Forzar tooltip arriba del rectángulo del Gantt */
+.gantt-task-react-tooltip {
+  position: absolute !important;
+  top: -35px !important;          /* Subirlo encima del rectángulo */
+  left: 50% !important;           /* Centrarlo horizontalmente */
+  transform: translateX(-50%) !important;
+  z-index: 9999 !important;
+  pointer-events: none;
+  max-width: 280px;
+  white-space: normal;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 8px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+
